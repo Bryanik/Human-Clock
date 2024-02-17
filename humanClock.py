@@ -190,150 +190,276 @@ def format_duration(seconds):
             sec = rsec3 % 60
             
             # for year == 1
-            # if year == 1 and day == 0 and hr == 0 and min == 0 and sec == 0:
-            # elif year == 1 and day == 0 hr == 0 and min == 0 and sec == 1:
-            # elif year == 1 and day == 0 hr == 0 and min == 1 and sec == 0:
-            # elif year == 1 and day == 0 hr == 0 and min == 1 and sec == 1:
-            # elif year == 1 and day == 0 hr == 0 and min > 1 and sec == 0:
-            # elif year == 1 and day == 0 hr == 0 and min > 1 and sec == 1:
-            # elif year == 1 and day == 0 hr == 0 and min > 1 and sec > 1:
+            if yr == 1 and day == 0 and hr == 0 and min == 0 and sec == 0:
+                return "1 year"
+            elif yr == 1 and day == 0 and hr == 0 and min == 0 and sec == 1:
+                return "1 year and 1 second"
+            elif yr == 1 and day == 0 and hr == 0 and min == 1 and sec == 0:
+                return "1 year and 1 minute"
+            elif yr == 1 and day == 0 and hr == 0 and min == 1 and sec == 1:
+                return "1 year, 1 minute and 1 second"
+            elif yr == 1 and day == 0 and hr == 0 and min > 1 and sec == 0:
+                return f"1 year and {min} minutes"
+            elif yr == 1 and day == 0 and hr == 0 and min > 1 and sec == 1:
+                return f"1 year, {min} minutes and 1 second"
+            elif yr == 1 and day == 0 and hr == 0 and min > 1 and sec > 1:
+                return f"1 year, {min} minutes and {sec} seconds"
             
-            # elif year == 1 and day == 0 hr == 1 and min == 0 and sec == 0:
-            # elif year == 1 and day == 0 hr == 1 and min == 0 and sec == 1:
-            # elif year == 1 and day == 0 hr == 1 and min == 1 and sec == 0:
-            # elif year == 1 and day == 0 hr == 1 and min == 1 and sec == 1:
-            # elif year == 1 and day == 0 hr == 1 and min > 1 and sec == 0:
-            # elif year == 1 and day == 0 hr == 1 and min > 1 and sec == 1:
-            # elif year == 1 and day == 0 hr == 1 and min > 1 and sec > 1:
+            elif yr == 1 and day == 0 and hr == 1 and min == 0 and sec == 0:
+                return "1 year and 1 hour"
+            elif yr == 1 and day == 0 and hr == 1 and min == 0 and sec == 1:
+                return "1 year, 1 hour and 1 second"
+            elif yr == 1 and day == 0 and hr == 1 and min == 1 and sec == 0:
+                return "1 year, 1 hour and 1 minute"
+            elif yr == 1 and day == 0 and hr == 1 and min == 1 and sec == 1:
+                return "1 year, 1 hour, 1 minute and 1 second"
+            elif yr == 1 and day == 0 and hr == 1 and min > 1 and sec == 0:
+                return f"1 year, 1 hour and {min} minutes"
+            elif yr == 1 and day == 0 and hr == 1 and min > 1 and sec == 1:
+                return f"1 year, 1 hour, {min} minutes and 1 second"
+            elif yr == 1 and day == 0 and hr == 1 and min > 1 and sec > 1:
+                return f"1 year, 1 hour, {min} minutes and {sec} seconds"
             
-            # elif year == 1 and day == 0 hr > 1 and min == 0 and sec == 0:
-            # elif year == 1 and day == 0 hr > 1 and min == 0 and sec == 1:
-            # elif year == 1 and day == 0 hr > 1 and min == 1 and sec == 0:
-            # elif year == 1 and day == 0 hr > 1 and min == 1 and sec == 1:
-            # elif year == 1 and day == 0 hr > 1 and min > 1 and sec == 0:
-            # elif year == 1 and day == 0 hr > 1 and min > 1 and sec == 1:
-            # elif year == 1 and day == 0 hr > 1 and min > 1 and sec > 1:
+            elif yr == 1 and day == 0 and hr > 1 and min == 0 and sec == 0:
+                return f"1 year and {hr} hours"
+            elif yr == 1 and day == 0 and hr > 1 and min == 0 and sec == 1:
+                return f"1 year, {hr} hours and 1 second"
+            elif yr == 1 and day == 0 and hr > 1 and min == 1 and sec == 0:
+                return f"1 year, {hr} hours and 1 minute"
+            elif yr == 1 and day == 0 and hr > 1 and min == 1 and sec == 1:
+                return f"1 year, {hr} hours, 1 minute and 1 second"
+            elif yr == 1 and day == 0 and hr > 1 and min > 1 and sec == 0:
+                return f"1 year, {hr} hours and {min} minutes"
+            elif yr == 1 and day == 0 and hr > 1 and min > 1 and sec == 1:
+                return f"1 year, {hr} hours, {min} minutes and 1 second"
+            elif yr == 1 and day == 0 and hr > 1 and min > 1 and sec > 1:
+                return f"1 year, {hr} hours, {min} minutes and {sec} seconds"
             
-            # elif year == 1 and day == 1 and hr == 0 and min == 0 and sec == 0:
-            # elif year == 1 and day == 1 hr == 0 and min == 0 and sec == 1:
-            # elif year == 1 and day == 1 hr == 0 and min == 1 and sec == 0:
-            # elif year == 1 and day == 1 hr == 0 and min == 1 and sec == 1:
-            # elif year == 1 and day == 1 hr == 0 and min > 1 and sec == 0:
-            # elif year == 1 and day == 1 hr == 0 and min > 1 and sec == 1:
-            # elif year == 1 and day == 1 hr == 0 and min > 1 and sec > 1:
+            elif yr == 1 and day == 1 and hr == 0 and min == 0 and sec == 0:
+                return "1 year and 1 day"
+            elif yr == 1 and day == 1 and hr == 0 and min == 0 and sec == 1:
+                return "1 year, 1 day and 1 second"
+            elif yr == 1 and day == 1 and hr == 0 and min == 1 and sec == 0:
+                return "1 year, 1 day and 1 minute"
+            elif yr == 1 and day == 1 and hr == 0 and min == 1 and sec == 1:
+                return "1 year, 1 day, 1 minute and 1 second"
+            elif yr == 1 and day == 1 and hr == 0 and min > 1 and sec == 0:
+                return f"1 year, 1 day and {min} minutes"
+            elif yr == 1 and day == 1 and hr == 0 and min > 1 and sec == 1:
+                return f"1 year, 1 day, {min} minutes and 1 second"
+            elif yr == 1 and day == 1 and hr == 0 and min > 1 and sec > 1:
+                return f"1 year, 1 day, {min} minutes and {sec} seconds"
             
-            # elif year == 1 and day == 1 hr == 1 and min == 0 and sec == 0:
-            # elif year == 1 and day == 1 hr == 1 and min == 0 and sec == 1:
-            # elif year == 1 and day == 1 hr == 1 and min == 1 and sec == 0:
-            # elif year == 1 and day == 1 hr == 1 and min == 1 and sec == 1:
-            # elif year == 1 and day == 1 hr == 1 and min > 1 and sec == 0:
-            # elif year == 1 and day == 1 hr == 1 and min > 1 and sec == 1:
-            # elif year == 1 and day == 1 hr == 1 and min > 1 and sec > 1:
+            elif yr == 1 and day == 1 and hr == 1 and min == 0 and sec == 0:
+                return "1 year, 1 day and 1 hour"
+            elif yr == 1 and day == 1 and hr == 1 and min == 0 and sec == 1:
+                return "1 year, 1 day, 1 hour and 1 second"
+            elif yr == 1 and day == 1 and hr == 1 and min == 1 and sec == 0:
+                return "1 year, 1 day, 1 hour and 1 minute"
+            elif yr == 1 and day == 1 and hr == 1 and min == 1 and sec == 1:
+                return "1 year, 1 day, 1 hour, 1 minute and 1 second"
+            elif yr == 1 and day == 1 and hr == 1 and min > 1 and sec == 0:
+                return f"1 year, 1 day, 1 hour and {min} minutes"
+            elif yr == 1 and day == 1 and hr == 1 and min > 1 and sec == 1:
+                return f"1 year, 1 day, 1 hour, {min} minutes and 1 second"
+            elif yr == 1 and day == 1 and hr == 1 and min > 1 and sec > 1:
+                return f"1 year, 1 day, 1 hour, {min} minutes and {sec} seconds"
             
-            # elif year == 1 and day == 1 hr > 1 and min == 0 and sec == 0:
-            # elif year == 1 and day == 1 hr > 1 and min == 0 and sec == 1:
-            # elif year == 1 and day == 1 hr > 1 and min == 1 and sec == 0:
-            # elif year == 1 and day == 1 hr > 1 and min == 1 and sec == 1:
-            # elif year == 1 and day == 1 hr > 1 and min > 1 and sec == 0:
-            # elif year == 1 and day == 1 hr > 1 and min > 1 and sec == 1:
-            # elif year == 1 and day == 1 hr > 1 and min > 1 and sec > 1:
+            elif yr == 1 and day == 1 and hr > 1 and min == 0 and sec == 0:
+                return f"1 year, 1 day and {hr} hours"
+            elif yr == 1 and day == 1 and hr > 1 and min == 0 and sec == 1:
+                return f"1 year, 1 day, {hr} hours and 1 second"
+            elif yr == 1 and day == 1 and hr > 1 and min == 1 and sec == 0:
+                return f"1 year, 1 day, {hr} hours and 1 minute"
+            elif yr == 1 and day == 1 and hr > 1 and min == 1 and sec == 1:
+                return f"1 year, 1 day, {hr} hours, 1 minute and 1 second"
+            elif yr == 1 and day == 1 and hr > 1 and min > 1 and sec == 0:
+                return f"1 year, 1 day, {hr} hours and {min} minutes"
+            elif yr == 1 and day == 1 and hr > 1 and min > 1 and sec == 1:
+                return f"1 year, 1 day, {hr} hours, {min} minutes and 1 second"
+            elif yr == 1 and day == 1 and hr > 1 and min > 1 and sec > 1:
+                return f"1 year, 1 day, {hr} hours, {min} minutes and {sec} seconds"
             
-            # elif year == 1 and day > 1 and hr == 0 and min == 0 and sec == 0:
-            # elif year == 1 and day > 1 hr == 0 and min == 0 and sec == 1:
-            # elif year == 1 and day > 1 hr == 0 and min == 1 and sec == 0:
-            # elif year == 1 and day > 1 hr == 0 and min == 1 and sec == 1:
-            # elif year == 1 and day > 1 hr == 0 and min > 1 and sec == 0:
-            # elif year == 1 and day > 1 hr == 0 and min > 1 and sec == 1:
-            # elif year == 1 and day > 1 hr == 0 and min > 1 and sec > 1:
+            elif yr == 1 and day > 1 and hr == 0 and min == 0 and sec == 0:
+                return f"1 year and {day} days"
+            elif yr == 1 and day > 1 and hr == 0 and min == 0 and sec == 1:
+                return f"1 year, {day} days and 1 second"
+            elif yr == 1 and day > 1 and hr == 0 and min == 1 and sec == 0:
+                return f"1 year, {day} days and 1 minute"
+            elif yr == 1 and day > 1 and hr == 0 and min == 1 and sec == 1:
+                return f"1 year, {day} days, 1 minute and 1 second"
+            elif yr == 1 and day > 1 and hr == 0 and min > 1 and sec == 0:
+                return f"1 year, {day} days and {min} minutes"
+            elif yr == 1 and day > 1 and hr == 0 and min > 1 and sec == 1:
+                return f"1 year, {day} days, {min} minutes and 1 second"
+            elif yr == 1 and day > 1 and hr == 0 and min > 1 and sec > 1:
+                return f"1 year, {day} days, {min} minutes and {sec} seconds"
             
-            # elif year == 1 and day > 1 hr == 1 and min == 0 and sec == 0:
-            # elif year == 1 and day > 1 hr == 1 and min == 0 and sec == 1:
-            # elif year == 1 and day > 1 hr == 1 and min == 1 and sec == 0:
-            # elif year == 1 and day > 1 hr == 1 and min == 1 and sec == 1:
-            # elif year == 1 and day > 1 hr == 1 and min > 1 and sec == 0:
-            # elif year == 1 and day > 1 hr == 1 and min > 1 and sec == 1:
-            # elif year == 1 and day > 1 hr == 1 and min > 1 and sec > 1:
+            elif yr == 1 and day > 1 and hr == 1 and min == 0 and sec == 0:
+                return f"1 year, {day} days and 1 hour"
+            elif yr == 1 and day > 1 and hr == 1 and min == 0 and sec == 1:
+                return f"1 year, {day} days, 1 hour and 1 second"
+            elif yr == 1 and day > 1 and hr == 1 and min == 1 and sec == 0:
+                return f"1 year, {day} days, 1 hour and 1 minute"
+            elif yr == 1 and day > 1 and hr == 1 and min == 1 and sec == 1:
+                return f"1 year, {day} days, 1 hour, 1 minute and 1 second"
+            elif yr == 1 and day > 1 and hr == 1 and min > 1 and sec == 0:
+                return f"1 year, {day} days, 1 hour and {min} minutes"
+            elif yr == 1 and day > 1 and hr == 1 and min > 1 and sec == 1:
+                return f"1 year, {day} days, 1 hour, {min} minutes and 1 second"
+            elif yr == 1 and day > 1 and hr == 1 and min > 1 and sec > 1:
+                return f"1 year, {day} days, 1 hour, {min} minutes and {sec} seconds"
                 
-            # elif year == 1 and day > 1 hr > 1 and min == 0 and sec == 0:
-            # elif year == 1 and day > 1 hr > 1 and min == 0 and sec == 1:
-            # elif year == 1 and day > 1 hr > 1 and min == 1 and sec == 0:
-            # elif year == 1 and day > 1 hr > 1 and min == 1 and sec == 1:
-            # elif year == 1 and day > 1 hr > 1 and min > 1 and sec == 0:
-            # elif year == 1 and day > 1 hr > 1 and min > 1 and sec == 1:
-            # elif year == 1 and day > 1 hr > 1 and min > 1 and sec > 1:
+            elif yr == 1 and day > 1 and hr > 1 and min == 0 and sec == 0:
+                return f"1 year, {day} days and {hr} hours"
+            elif yr == 1 and day > 1 and hr > 1 and min == 0 and sec == 1:
+                return f"1 year, {day} days, {hr} hours and 1 second"
+            elif yr == 1 and day > 1 and hr > 1 and min == 1 and sec == 0:
+                return f"1 year, {day} days, {hr} hours and 1 minute"
+            elif yr == 1 and day > 1 and hr > 1 and min == 1 and sec == 1:
+                return f"1 year, {day} days, {hr} hours, 1 minute and 1 second"
+            elif yr == 1 and day > 1 and hr > 1 and min > 1 and sec == 0:
+                return f"1 year, {day} days, {hr} hours and {min} minutes"
+            elif yr == 1 and day > 1 and hr > 1 and min > 1 and sec == 1:
+                return f"1 year, {day} days, {hr} hours, {min} minutes and 1 second"
+            elif yr == 1 and day > 1 and hr > 1 and min > 1 and sec > 1:
+                return f"1 year, {day} days, {hr} hours, {min} minutes and {sec} seconds"
             
-            # # for year > 1
-            # elif year > 1 and day == 0 and hr == 0 and min == 0 and sec == 0:
-            # elif year > 1 and day == 0 hr == 0 and min == 0 and sec == 1:
-            # elif year > 1 and day == 0 hr == 0 and min == 1 and sec == 0:
-            # elif year > 1 and day == 0 hr == 0 and min == 1 and sec == 1:
-            # elif year > 1 and day == 0 hr == 0 and min > 1 and sec == 0:
-            # elif year > 1 and day == 0 hr == 0 and min > 1 and sec == 1:
-            # elif year > 1 and day == 0 hr == 0 and min > 1 and sec > 1:
+            # for year > 1
+            elif yr > 1 and day == 0 and hr == 0 and min == 0 and sec == 0:
+                return f"{yr} years"
+            elif yr > 1 and day == 0 and hr == 0 and min == 0 and sec == 1:
+                return f"{yr} years and 1 second"
+            elif yr > 1 and day == 0 and hr == 0 and min == 1 and sec == 0:
+                return f"{yr} years and 1 minute"
+            elif yr > 1 and day == 0 and hr == 0 and min == 1 and sec == 1:
+                return f"{yr} years, 1 minute and 1 second"
+            elif yr > 1 and day == 0 and hr == 0 and min > 1 and sec == 0:
+                return f"{yr} years and {min} minutes"
+            elif yr > 1 and day == 0 and hr == 0 and min > 1 and sec == 1:
+                return f"{yr} years, {min} minutes and 1 second"
+            elif yr > 1 and day == 0 and hr == 0 and min > 1 and sec > 1:
+                return f"{yr} years, {min} minutes and {sec} seconds"
             
-            # elif year > 1 and day == 0 hr == 1 and min == 0 and sec == 0:
-            # elif year > 1 and day == 0 hr == 1 and min == 0 and sec == 1:
-            # elif year > 1 and day == 0 hr == 1 and min == 1 and sec == 0:
-            # elif year > 1 and day == 0 hr == 1 and min == 1 and sec == 1:
-            # elif year > 1 and day == 0 hr == 1 and min > 1 and sec == 0:
-            # elif year > 1 and day == 0 hr == 1 and min > 1 and sec == 1:
-            # elif year > 1 and day == 0 hr == 1 and min > 1 and sec > 1:
+            elif yr > 1 and day == 0 and hr == 1 and min == 0 and sec == 0:
+                return f"{yr} years and 1 hour"
+            elif yr > 1 and day == 0 and hr == 1 and min == 0 and sec == 1:
+                return f"{yr} years, 1 hour and 1 second"
+            elif yr > 1 and day == 0 and hr == 1 and min == 1 and sec == 0:
+                return f"{yr} years, 1 hour and 1 minute"
+            elif yr > 1 and day == 0 and hr == 1 and min == 1 and sec == 1:
+                return f"{yr} years, 1 hour, 1 minute and 1 second"
+            elif yr > 1 and day == 0 and hr == 1 and min > 1 and sec == 0:
+                return f"{yr} years, 1 hour and {min} minutes"
+            elif yr > 1 and day == 0 and hr == 1 and min > 1 and sec == 1:
+                return f"{yr} years, 1 hour, {min} minutes and 1 second"
+            elif yr > 1 and day == 0 and hr == 1 and min > 1 and sec > 1:
+                return f"{yr} years, 1 hour, {min} minutes and {sec} seconds"
             
-            # elif year > 1 and day == 0 hr > 1 and min == 0 and sec == 0:
-            # elif year > 1 and day == 0 hr > 1 and min == 0 and sec == 1:
-            # elif year > 1 and day == 0 hr > 1 and min == 1 and sec == 0:
-            # elif year > 1 and day == 0 hr > 1 and min == 1 and sec == 1:
-            # elif year > 1 and day == 0 hr > 1 and min > 1 and sec == 0:
-            # elif year > 1 and day == 0 hr > 1 and min > 1 and sec == 1:
-            # elif year > 1 and day == 0 hr > 1 and min > 1 and sec > 1:
+            elif yr > 1 and day == 0 and hr > 1 and min == 0 and sec == 0:
+                return f"{yr} years and {hr} hours"
+            elif yr > 1 and day == 0 and hr > 1 and min == 0 and sec == 1:
+                return f"{yr} years, {hr} hours and 1 second"
+            elif yr > 1 and day == 0 and hr > 1 and min == 1 and sec == 0:
+                return f"{yr} years, {hr} hours and 1 minute"
+            elif yr > 1 and day == 0 and hr > 1 and min == 1 and sec == 1:
+                return f"{yr} years, {hr} hours, 1 minute and 1 second"
+            elif yr > 1 and day == 0 and hr > 1 and min > 1 and sec == 0:
+                return f"{yr} years, {hr} hours and {min} minutes"
+            elif yr > 1 and day == 0 and hr > 1 and min > 1 and sec == 1:
+                return f"{yr} years, {hr} hours, {min} minutes and 1 second"
+            elif yr > 1 and day == 0 and hr > 1 and min > 1 and sec > 1:
+                return f"{yr} years, {hr} hours, {min} minutes and {sec} seconds"
             
-            # elif year > 1 and day == 1 and hr == 0 and min == 0 and sec == 0:
-            # elif year > 1 and day == 1 hr == 0 and min == 0 and sec == 1:
-            # elif year > 1 and day == 1 hr == 0 and min == 1 and sec == 0:
-            # elif year > 1 and day == 1 hr == 0 and min == 1 and sec == 1:
-            # elif year > 1 and day == 1 hr == 0 and min > 1 and sec == 0:
-            # elif year > 1 and day == 1 hr == 0 and min > 1 and sec == 1:
-            # elif year > 1 and day == 1 hr == 0 and min > 1 and sec > 1:
+            elif yr > 1 and day == 1 and hr == 0 and min == 0 and sec == 0:
+                return f"{yr} years and 1 day"
+            elif yr > 1 and day == 1 and hr == 0 and min == 0 and sec == 1:
+                return f"{yr} year, 1 day and 1 second"
+            elif yr > 1 and day == 1 and hr == 0 and min == 1 and sec == 0:
+                return f"{yr} years, 1 day and 1 minute"
+            elif yr > 1 and day == 1 and hr == 0 and min == 1 and sec == 1:
+                return f"{yr} years, 1 day, 1 minute and 1 second"
+            elif yr > 1 and day == 1 and hr == 0 and min > 1 and sec == 0:
+                return f"{yr} years, 1 day and {min} minutes"
+            elif yr > 1 and day == 1 and hr == 0 and min > 1 and sec == 1:
+                return f"{yr} years, 1 day, {min} minutes and 1 second"
+            elif yr > 1 and day == 1 and hr == 0 and min > 1 and sec > 1:
+                return f"{yr} years, 1 day, {min} minutes and {sec} seconds"
             
-            # elif year > 1 and day == 1 hr == 1 and min == 0 and sec == 0:
-            # elif year > 1 and day == 1 hr == 1 and min == 0 and sec == 1:
-            # elif year > 1 and day == 1 hr == 1 and min == 1 and sec == 0:
-            # elif year > 1 and day == 1 hr == 1 and min == 1 and sec == 1:
-            # elif year > 1 and day == 1 hr == 1 and min > 1 and sec == 0:
-            # elif year > 1 and day == 1 hr == 1 and min > 1 and sec == 1:
-            # elif year > 1 and day == 1 hr == 1 and min > 1 and sec > 1:
+            elif yr > 1 and day == 1 and hr == 1 and min == 0 and sec == 0:
+                return f"{yr} years, 1 day and 1 hour"
+            elif yr > 1 and day == 1 and hr == 1 and min == 0 and sec == 1:
+                return f"{yr} years, 1 day, 1 hour and 1 second"
+            elif yr > 1 and day == 1 and hr == 1 and min == 1 and sec == 0:
+                return f"{yr} years, 1 day, 1 hour and 1 minute"
+            elif yr > 1 and day == 1 and hr == 1 and min == 1 and sec == 1:
+                return f"{yr} years, 1 day, 1 hour, 1 minute and 1 second"
+            elif yr > 1 and day == 1 and hr == 1 and min > 1 and sec == 0:
+                return f"{yr} years, 1 day, 1 hour and {min} minutes"
+            elif yr > 1 and day == 1 and hr == 1 and min > 1 and sec == 1:
+                return f"{yr} years, 1 day, 1 hour, {min} minutes and 1 second"
+            elif yr > 1 and day == 1 and hr == 1 and min > 1 and sec > 1:
+                return f"{yr} years, 1 day, 1 hour, {min} minutes and {sec} seconds"
             
-            # elif year > 1 and day == 1 hr > 1 and min == 0 and sec == 0:
-            # elif year > 1 and day == 1 hr > 1 and min == 0 and sec == 1:
-            # elif year > 1 and day == 1 hr > 1 and min == 1 and sec == 0:
-            # elif year > 1 and day == 1 hr > 1 and min == 1 and sec == 1:
-            # elif year > 1 and day == 1 hr > 1 and min > 1 and sec == 0:
-            # elif year > 1 and day == 1 hr > 1 and min > 1 and sec == 1:
-            # elif year > 1 and day == 1 hr > 1 and min > 1 and sec > 1:
+            elif yr > 1 and day == 1 and hr > 1 and min == 0 and sec == 0:
+                return f"{yr} years, 1 day and {hr} hours"
+            elif yr > 1 and day == 1 and hr > 1 and min == 0 and sec == 1:
+                return f"{yr} years, 1 day, {hr} hours and 1 second"
+            elif yr > 1 and day == 1 and hr > 1 and min == 1 and sec == 0:
+                return f"{yr} years, 1 day, {hr} hours and 1 minute"
+            elif yr > 1 and day == 1 and hr > 1 and min == 1 and sec == 1:
+                return f"{yr} years, 1 day, {hr} hours, 1 minute and 1 second"
+            elif yr > 1 and day == 1 and hr > 1 and min > 1 and sec == 0:
+                return f"{yr} years, 1 day, {hr} hours and {min} minutes"
+            elif yr > 1 and day == 1 and hr > 1 and min > 1 and sec == 1:
+                return f"{yr} years, 1 day, {hr} hours, {min} minutes and 1 second"
+            elif yr > 1 and day == 1 and hr > 1 and min > 1 and sec > 1:
+                return f"{yr} years, 1 day, {hr} hours, {min} minutes and {sec} seconds"
             
-            # elif year > 1 and day > 1 and hr == 0 and min == 0 and sec == 0:
-            # elif year > 1 and day > 1 hr == 0 and min == 0 and sec == 1:
-            # elif year > 1 and day > 1 hr == 0 and min == 1 and sec == 0:
-            # elif year > 1 and day > 1 hr == 0 and min == 1 and sec == 1:
-            # elif year > 1 and day > 1 hr == 0 and min > 1 and sec == 0:
-            # elif year > 1 and day > 1 hr == 0 and min > 1 and sec == 1:
-            # elif year > 1 and day > 1 hr == 0 and min > 1 and sec > 1:
+            elif yr > 1 and day > 1 and hr == 0 and min == 0 and sec == 0:
+                return f"{yr} years and {day} days"
+            elif yr > 1 and day > 1 and hr == 0 and min == 0 and sec == 1:
+                return f"{yr} years, {day} days and 1 second"
+            elif yr > 1 and day > 1 and hr == 0 and min == 1 and sec == 0:
+                return f"{yr} years, {day} days and 1 minute"
+            elif yr > 1 and day > 1 and hr == 0 and min == 1 and sec == 1:
+                return f"{yr} years, {day} days, 1 minute and 1 second"
+            elif yr > 1 and day > 1 and hr == 0 and min > 1 and sec == 0:
+                return f"{yr} years, {day} days and {min} minutes"
+            elif yr > 1 and day > 1 and hr == 0 and min > 1 and sec == 1:
+                return f"{yr} years, {day} days, {min} minutes and 1 second"
+            elif yr > 1 and day > 1 and hr == 0 and min > 1 and sec > 1:
+                return f"{yr} years, {day} days, {min} minutes and {sec} seconds"
             
-            # elif year > 1 and day > 1 hr == 1 and min == 0 and sec == 0:
-            # elif year > 1 and day > 1 hr == 1 and min == 0 and sec == 1:
-            # elif year > 1 and day > 1 hr == 1 and min == 1 and sec == 0:
-            # elif year > 1 and day > 1 hr == 1 and min == 1 and sec == 1:
-            # elif year > 1 and day > 1 hr == 1 and min > 1 and sec == 0:
-            # elif year > 1 and day > 1 hr == 1 and min > 1 and sec == 1:
-            # elif year > 1 and day > 1 hr == 1 and min > 1 and sec > 1:
+            elif yr > 1 and day > 1 and hr == 1 and min == 0 and sec == 0:
+                return f"{yr} years, {day} days and 1 hour"
+            elif yr > 1 and day > 1 and hr == 1 and min == 0 and sec == 1:
+                return f"{yr} years, {day} days, 1 hour and 1 second"
+            elif yr > 1 and day > 1 and hr == 1 and min == 1 and sec == 0:
+                return f"{yr} years, {day} days, 1 hour and 1 minute"
+            elif yr > 1 and day > 1 and hr == 1 and min == 1 and sec == 1:
+                return f"{yr} years, {day} days, 1 hour, 1 minute and 1 second"
+            elif yr > 1 and day > 1 and hr == 1 and min > 1 and sec == 0:
+                return f"{yr} years, {day} days, 1 hour and {min} minutes"
+            elif yr > 1 and day > 1 and hr == 1 and min > 1 and sec == 1:
+                return f"{yr} years, {day} days, 1 hour, {min} minutes and 1 second"
+            elif yr > 1 and day > 1 and hr == 1 and min > 1 and sec > 1:
+                return f"{yr} years, {day} days, 1 hour, {min} minutes and {sec} seconds"
                 
-            # elif year > 1 and day > 1 hr > 1 and min == 0 and sec == 0:
-            # elif year > 1 and day > 1 hr > 1 and min == 0 and sec == 1:
-            # elif year > 1 and day > 1 hr > 1 and min == 1 and sec == 0:
-            # elif year > 1 and day > 1 hr > 1 and min == 1 and sec == 1:
-            # elif year > 1 and day > 1 hr > 1 and min > 1 and sec == 0:
-            # elif year > 1 and day > 1 hr > 1 and min > 1 and sec == 1:
-            # elif year > 1 and day > 1 hr > 1 and min > 1 and sec > 1:
+            elif yr > 1 and day > 1 and hr > 1 and min == 0 and sec == 0:
+                return f"{yr} years, {day} days and {hr} hours"
+            elif yr > 1 and day > 1 and hr > 1 and min == 0 and sec == 1:
+                return f"{yr} years, {day} days, {hr} hours and 1 second"
+            elif yr > 1 and day > 1 and hr > 1 and min == 1 and sec == 0:
+                return f"{yr} years, {day} days, {hr} hours and 1 minute"
+            elif yr > 1 and day > 1 and hr > 1 and min == 1 and sec == 1:
+                return f"{yr} years, {day} days, {hr} hours, 1 minute and 1 second"
+            elif yr > 1 and day > 1 and hr > 1 and min > 1 and sec == 0:
+                return f"{yr} years, {day} days, {hr} hours and {min} minutes"
+            elif yr > 1 and day > 1 and hr > 1 and min > 1 and sec == 1:
+                return f"{yr} years, {day} days, {hr} hours, {min} minutes and 1 second"
+            elif yr > 1 and day > 1 and hr > 1 and min > 1 and sec > 1:
+                return f"{yr} years, {day} days, {hr} hours, {min} minutes and {sec} seconds"
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
